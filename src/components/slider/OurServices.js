@@ -1,159 +1,110 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  Grid,
-  Container,
-  createTheme,
-  ThemeProvider,
-} from "@mui/material";
-import {
-  FaShippingFast,
-  FaPlane,
-  FaTruck,
-  FaBox,
-  FaWarehouse,
-  FaGlobeAmericas,
-} from "react-icons/fa";
 
-const theme = createTheme({
-  typography: {
-    fontFamily: "Roboto",
-  },
-});
-
-const services = [
-  {
-    id: 1,
-    icon: <FaShippingFast className="text-primary text-6xl mb-4" />,
-    title: "Fast & Safe Delivery",
-    description:
-      "Fusce pretium nulla et purus malesuada feugiat sed vel mauris tincidunt vehicula lorem vel hendrerit justo praesent aliquam maximus imperdiet integer sagittis leo",
-  },
-  {
-    id: 2,
-    icon: <FaPlane className="text-primary text-6xl mb-4" />,
-    title: "International Air Freight",
-    description:
-      "Fusce pretium nulla et purus malesuada feugiat sed vel mauris tincidunt vehicula lorem vel hendrerit justo praesent aliquam maximus imperdiet integer sagittis leo",
-  },
-  {
-    id: 3,
-    icon: <FaTruck className="text-primary text-6xl mb-4" />,
-    title: "Ground Shipping",
-    description:
-      "Fusce pretium nulla et purus malesuada feugiat sed vel mauris tincidunt vehicula lorem vel hendrerit justo praesent aliquam maximus imperdiet integer sagittis leo",
-  },
-  {
-    id: 4,
-    icon: <FaBox className="text-primary text-6xl mb-4" />,
-    title: "Packaging and Storage",
-    description:
-      "Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus",
-  },
-  {
-    id: 5,
-    icon: <FaWarehouse className="text-primary text-6xl mb-4" />,
-    title: "Cargo",
-    description:
-      "Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus",
-  },
-  {
-    id: 6,
-    icon: <FaGlobeAmericas className="text-primary text-6xl mb-4" />,
-    title: "Worldwide Transport",
-    description:
-      "Mauris eros tortor, tristique cursus porttitor et, luctus sed urna. Quisque id libero risus. Aliquam accumsan erat id sem placerat tempus",
-  },
-];
-
-const OurServices = () => {
+const ServicesSection = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Typography
-          variant="h2"
-          component="h2"
-          gutterBottom
-          align="center"
-          sx={{
-            fontWeight: "bold",
-            mb: 3,
-            color: "primary.main",
-            fontSize: "4rem",
-            "@media (max-width:600px)": {
-              fontSize: "2.5rem",
-            },
-          }}
-        >
-          Our Services
-        </Typography>
-        <Typography
-          variant="h6"
-          align="center"
-          color="text.secondary"
-          sx={{
-            mb: 4,
-            maxWidth: 800,
-            mx: "auto",
-            fontSize: "1.8rem",
-            "@media (max-width:600px)": {
-              fontSize: "1.2rem",
-            },
-          }}
-        >
-          Cras varius purus in tempus porttitor ut dapibus efficitur sagittis
-          cras vitae lacus metus nunc vulputate facilisis nisi eu lobortis erat
-          consequat ut. Aliquam et justo ante. Nam a cursus velit.
-        </Typography>
-        <Grid container spacing={3} justifyContent="center">
-          {services.map((service) => (
-            <Grid item xs={12} md={4} key={service.id}>
-              <Card
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  textAlign: "center",
-                  p: 2,
-                  transition: "transform 0.3s",
-                  "&:hover": { transform: "scale(1.05)" },
-                  borderTop: "4px solid primary.main",
-                }}
-                elevation={3}
-              >
-                <div className="mb-4">{service.icon}</div>
-                <CardContent>
-                  <Typography
-                    variant="h4"
-                    component="h3"
-                    gutterBottom
-                    sx={{
-                      color: "primary.main",
-                      fontSize: "2rem",
-                    }}
-                  >
-                    {service.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    sx={{
-                      fontSize: "1.5rem",
-                    }}
-                  >
-                    {service.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </ThemeProvider>
+    <section className="custom-padding services">
+      <div className="container">
+        {/* Title Section */}
+        <div className="main-heading text-center">
+          <h2>our services</h2>
+          <p>
+            Cras varius purus in tempus porttitor ut dapibus efficitur sagittis
+            cras vitae lacus metus nunc vulputate facilisis nisi <br /> eu
+            lobortis erat consequat ut. Aliquam et justo ante. Nam a cursus
+            velit
+          </p>
+        </div>
+        {/* End Title Section */}
+
+        {/* Row */}
+        <div className="row">
+          <div id="services">
+            {/* Service Items */}
+            <div className="col-md-4 col-sm-6 item">
+              <div className="services-grid">
+                <div className="icons">
+                  <i className="flaticon-box-of-packing-for-delivery"></i>
+                </div>
+                <h4>packaging and storage</h4>
+                <p>
+                  We have the right caring, experience and dedicated
+                  professional for you.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4 col-sm-6 item">
+              <div className="services-grid">
+                <div className="icons">
+                  <i className="flaticon-ocean-transportation"></i>
+                </div>
+                <h4>cargo</h4>
+                <p>
+                  We have the right caring, experience and dedicated
+                  professional for you.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4 col-sm-6 item">
+              <div className="services-grid">
+                <div className="icons">
+                  <i className="flaticon-delivery-truck"></i>
+                </div>
+                <h4>worldwide transport</h4>
+                <p>
+                  We have the right caring, experience and dedicated
+                  professional for you.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4 col-sm-6 item">
+              <div className="services-grid">
+                <div className="icons">
+                  <i className="flaticon-view-symbol-on-delivery-opened-box"></i>
+                </div>
+                <h4>ware housing</h4>
+                <p>
+                  We have the right caring, experience and dedicated
+                  professional for you.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4 col-sm-6 item">
+              <div className="services-grid">
+                <div className="icons">
+                  <i className="flaticon-sea-ship-with-containers"></i>
+                </div>
+                <h4>Sea Freight</h4>
+                <p>
+                  We have the right caring, experience and dedicated
+                  professional for you.
+                </p>
+              </div>
+            </div>
+
+            <div className="col-md-4 col-sm-6 item">
+              <div className="services-grid">
+                <div className="icons">
+                  <i className="flaticon-delivery-truck-with-packages-behind"></i>
+                </div>
+                <h4>Door To Door Delivery</h4>
+                <p>
+                  We have the right caring, experience and dedicated
+                  professional for you.
+                </p>
+              </div>
+            </div>
+            {/* Service Items End */}
+          </div>
+        </div>
+        {/* Row End */}
+      </div>
+      {/* End Container */}
+    </section>
   );
 };
 
-export default OurServices;
+export default ServicesSection;

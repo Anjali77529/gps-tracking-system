@@ -2,8 +2,14 @@ import React from "react";
 import TopMenu from "./components/header/TopMenu";
 import MainMenu from "./components/header/MainMenu";
 // import HomePageSlider from "./components/slider/HomePageSlider";
-import OurServices from "./components/slider/OurServices";
 import TrackShipment from "./components/slider/TrackShipment";
+import WhyChooseUs from "./components/slider/WhyChoose";
+import Services from "./components/slider/Services";
+import Footer from "./components/slider/Footer";
+import TrackingAppSection from "./components/slider/TrackingApp";
+import ProcessSection from "./components/slider/ProcessSection";
+import ServicesSection from "./components/slider/OurServices";
+import AboutSection from "./components/slider/AboutSection";
 
 function App() {
   return (
@@ -13,7 +19,13 @@ function App() {
       <TrackShipment />
 
       {/* <HomePageSlider /> */}
-      <OurServices />
+      <ServicesSection />
+      <ProcessSection />
+      {/* <AboutSection /> */}
+      <TrackingAppSection />
+      <WhyChooseUs />
+      <Services />
+      <Footer />
     </>
   );
 }
